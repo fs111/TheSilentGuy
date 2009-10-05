@@ -1,0 +1,20 @@
+188,192d187
+<    def call_with_origin(self, func, origin, phenny, input): 
+<       try: func(phenny, input, origin)
+<       except Exception, e: 
+<          self.error(origin)
+< 
+217,219c212
+<                   target = self.call
+<                   if hasattr(func, "with_origin"):
+<                         target = self.call_with_origin
+---
+> 
+222c215
+<                      t = threading.Thread(target=target, args=targs)
+---
+>                      t = threading.Thread(target=self.call, args=targs)
+224c217
+<                   else: target(func, origin, phenny, input)
+---
+>                   else: self.call(func, origin, phenny, input)
