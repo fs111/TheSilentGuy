@@ -5,8 +5,8 @@ and write to stdin of that process. Right now the plugin it can do two things:
 
 * it announces every user that joins a channel that phenny is connected to
   with the sentence "Dudes, $nick has joined the channel" (this requires some
-  hacks in the phenny code base that are not yet in the codebase here right
-  now
+  hacks in the phenny code base that can be found in the "bot.diff" file
+
 * it defines the ".talk" command which can be used by all admins of the bot to
   force to say custom things
 
