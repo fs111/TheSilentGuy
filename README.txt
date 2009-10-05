@@ -10,8 +10,10 @@ and write to stdin of that process. Right now the plugin it can do two things:
 * it defines the ".talk" command which can be used by all admins of the bot to
   force to say custom things
 
+The license of this module is GPLv3 [3]
 
 --
 [0] http://hackerspace.be/TheSilentGuy
 [1] http://inamidst.com/phenny/
 [2] http://espeak.sourceforge.net/
+[3] http://www.gnu.org/licenses/gpl-3.0.html
