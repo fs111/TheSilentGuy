@@ -12,6 +12,18 @@ and write to stdin of that process. Right now the plugin it can do two things:
 
 The license of this module is GPLv3 [3]
 
+To patch phenny to be able to use the module download the latest phenny from
+[1] go into the toplevel directory and run:
+
+patch -p0 < /path/to/TheSilentGuy/bot.diff
+
+after that add the "src" dir to the "extra" list like so:
+
+extra = ['/path/to/TheSilentGuy/src']
+
+Now all people configured as admins are able to use ".talk" command.
+
+
 --
 [0] http://hackerspace.be/TheSilentGuy
 [1] http://inamidst.com/phenny/
