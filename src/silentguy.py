@@ -1,5 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+This is a little module for phenny that talks to you, for more details see here:
+http://hackerspace.be/TheSilentGuy
+http://github.com/fs111/TheSilentGuy
+
+Author: André Kelpe <efeshundertelf at googlemail dot com>
+License: GPLv3
+
+"""
 from subprocess import Popen, PIPE
 
 COMMAND = ".talk"
