@@ -1,4 +1,6 @@
-This is a little toy project build in the Hackerspace Brussels (hsbxl)[0], which is basically
+Welcome to TheSilentGuy, a talking (as in sound) IRC bot.
+
+It is a little toy project build in the Hackerspace Brussels (hsbxl)[0], which is basically
 a plugin for the phenny[1] IRC bot. espeak [2] is used as the text-to-speech
 engine, since that is the easiest to use from python. You create a subprocess
 and write to stdin of that process. Right now the plugin it can do two things:
