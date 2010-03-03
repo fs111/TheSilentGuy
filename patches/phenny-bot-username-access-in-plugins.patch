@@ -1,0 +1,32 @@
+--- ../phenny_orig/bot.py	2009-10-05 23:18:36.000000000 +0200
++++ bot.py	2009-10-05 23:22:34.000000000 +0200
+@@ -185,6 +185,11 @@
+       except Exception, e: 
+          self.error(origin)
+ 
++   def call_with_origin(self, func, origin, phenny, input): 
++      try: func(phenny, input, origin)
++      except Exception, e: 
++         self.error(origin)
++
+    def limit(self, origin, func): 
+       if origin.sender and origin.sender.startswith('#'): 
+          if hasattr(self.config, 'limit'): 
+@@ -209,12 +214,14 @@
+ 
+                   phenny = self.wrapped(origin, text, match)
+                   input = self.input(origin, text, bytes, match, event, args)
+-
++                  target = self.call
++                  if hasattr(func, "with_origin"):
++                        target = self.call_with_origin
+                   if func.thread: 
+                      targs = (func, origin, phenny, input)
+-                     t = threading.Thread(target=self.call, args=targs)
++                     t = threading.Thread(target=target, args=targs)
+                      t.start()
+-                  else: self.call(func, origin, phenny, input)
++                  else: target(func, origin, phenny, input)
+ 
+                   for source in [origin.sender, origin.nick]: 
+                      try: self.stats[(func.name, source)] += 1
