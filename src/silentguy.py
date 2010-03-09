@@ -20,7 +20,7 @@ class Speaker:
 
     def __init__(self):
         self.process = Popen([ESPEAK_COMMAND], shell=True,
-          stdin=PIPE, stdout=PIPE, close_fds=True)
+          stdin=PIPE, close_fds=True)
 
     def sayitoutloud(self, what):
         """I'm geek and proud! :-)"""
