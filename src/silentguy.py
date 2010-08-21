@@ -6,7 +6,7 @@ http://hackerspace.be/TheSilentGuy
 http://github.com/fs111/TheSilentGuy
 
 Author: André Kelpe <efeshundertelf at googlemail dot com>
-License: GPLv3
+License: MIT
 
 """
 from subprocess import Popen, PIPE
